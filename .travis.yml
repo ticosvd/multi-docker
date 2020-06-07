@@ -14,6 +14,14 @@ after_success:
     - docker build -t ticosvd/multi-nginx ./nginx 
     - docker build -t ticosvd/multi-server ./server
     - docker build -t ticosvd/multi-worker ./worker    
+
+    - docker  tag ticosvd/multi-client rrail/multi-client 
+    - docker  tag ticosvd/multi-nginx  rrail/multi-nginx
+    - docker  tag ticosvd/multi-server rrail/multi-server
+    - docker  tag ticosvd/multi-worker rrail/multi-worker 
+
+
+
 #Log in to docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 #Take those image and push them to docker hub
