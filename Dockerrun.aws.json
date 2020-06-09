@@ -1,5 +1,5 @@
 {
-    "AWSEBDockerrunVerson" :2,
+    "AWSEBDockerrunVerson" :1,
     "containerDefinitions" :[
         {
           "name": "client",
